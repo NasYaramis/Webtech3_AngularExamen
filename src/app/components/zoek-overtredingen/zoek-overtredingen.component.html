@@ -1,0 +1,27 @@
+<p>zoek-overtredingen works!</p>
+
+<h2>Zoek een overtreding</h2>
+
+<label>Zoek a.h.v. straat</label>
+<input [(ngModel)]="straatnaam" type="text">
+
+<button (click)="findByStreet()">Toon overtreding</button>
+<br/><br/>
+<label>Zoek a.h.v. minimum snelheid</label>
+<input [(ngModel)]="snelheid" type="text">
+
+<button (click)="findBySpeed()">Toon overtreding</button>
+
+<div  *ngIf="found" >
+  <p>De overtredingen die je zocht:</p>
+
+  <u >
+    <li *ngFor="let overtreding of foundOvertreding">
+      <span>{{ overtreding.datum_vaststelling + ' ' + overtreding.opnameplaats_straat 
+      + ' '  + overtreding.aantal_overtredingen_snelheid + ' ' + overtreding.aantal_overtredingen_roodlicht}}</span>
+
+    </li>
+  </u>
+
+</div>
+<p class="tiny">please let me pass... </p>
