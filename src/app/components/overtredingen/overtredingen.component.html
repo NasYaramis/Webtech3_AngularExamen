@@ -1,0 +1,12 @@
+<p>
+  alle overtredingen:
+</p>
+
+
+<u >
+  <li *ngFor="let overtreding of overtredingen">
+     <span>{{ 'datum: ' + overtreding.datum_vaststelling + ' ' + 'straat: ' + overtreding.opnameplaats_straat 
+      + ' '  + 'snelheidsovertredingen: ' + overtreding.aantal_overtredingen_snelheid + ' ' + 'roodlichtovertredingen: ' + overtreding.aantal_overtredingen_roodlicht}}</span>
+
+  </li>
+</u>
